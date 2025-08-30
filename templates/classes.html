@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Classes</h2>
+<a href="{{ url_for('add_class') }}">Add Class</a>
+<ul>
+  {% for c in classes %}
+  <li>{{ c.name }} - {{ c.schedule }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}
